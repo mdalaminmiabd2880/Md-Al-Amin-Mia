@@ -1,0 +1,6 @@
+{
+  "name": "ব্যক্তিগত তথ্য",
+  "description": "ব্যক্তিগত তথ্য (PIMS) — নিরাপদ ব্যক্তিগত ও প্রাতিষ্ঠানিক তথ্য ব্যবস্থাপনা, বাংলাদেশ লোকেশন ও শিক্ষা প্রতিষ্ঠান ডাটাবেস, রোল-ভিত্তিক অ্যাক্সেস এবং বাংলা PDF রিপোর্ট।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

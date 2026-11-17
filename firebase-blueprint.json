@@ -1,0 +1,257 @@
+{
+  "entities": {
+    "WorkspaceMeta": {
+      "title": "Workspace Metadata",
+      "description": "Root workspace metadata for the Google-authenticated organization owner.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "Firebase Auth UID of the owner." },
+        "email": { "type": "string", "description": "Google account email." },
+        "displayName": { "type": "string", "description": "Google account display name." },
+        "workspaceInitialized": { "type": "boolean", "description": "Whether initial Super Admin setup completed." },
+        "nextIdSequence": { "type": "integer", "description": "Monotonic counter for Personal ID generation." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Server creation timestamp." },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Server update timestamp." }
+      },
+      "required": ["userId", "email", "displayName", "workspaceInitialized", "nextIdSequence", "createdAt", "updatedAt"]
+    },
+    "WebsiteSettings": {
+      "title": "Website & App Settings",
+      "description": "Configurable branding, theme colors, header, footer, welcome messages, and mandatory fields.",
+      "type": "object",
+      "properties": {
+        "appNameBn": { "type": "string" },
+        "appNameEn": { "type": "string" },
+        "primaryColorHex": { "type": "string" },
+        "accentColorHex": { "type": "string" },
+        "headerText": { "type": "string" },
+        "footerText": { "type": "string" },
+        "welcomeMessageBn": { "type": "string" },
+        "welcomeMessageEn": { "type": "string" },
+        "contactPhone": { "type": "string" },
+        "contactEmail": { "type": "string" },
+        "logoBase64": { "type": "string" },
+        "showStatsSection": { "type": "boolean" },
+        "showQuickActionsSection": { "type": "boolean" },
+        "showPrivacyNotice": { "type": "boolean" },
+        "mandatoryFields": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "appNameBn", "appNameEn", "primaryColorHex", "accentColorHex",
+        "headerText", "footerText", "welcomeMessageBn", "welcomeMessageEn",
+        "contactPhone", "contactEmail", "logoBase64",
+        "showStatsSection", "showQuickActionsSection", "showPrivacyNotice",
+        "mandatoryFields", "createdAt", "updatedAt"
+      ]
+    },
+    "PimsAccount": {
+      "title": "PIMS Account & Profile",
+      "description": "Comprehensive personal, educational, goal, organizational, address, and credential record.",
+      "type": "object",
+      "properties": {
+        "personalId": { "type": "string" },
+        "passwordHash": { "type": "string" },
+        "passwordSalt": { "type": "string" },
+        "role": { "type": "string", "enum": ["SUPER_ADMIN", "ADMIN", "EDITOR", "VIEWER", "NORMAL_USER"] },
+        "active": { "type": "boolean" },
+        "mustChangePassword": { "type": "boolean" },
+        "failedLoginAttempts": { "type": "integer" },
+        "lockedUntilEpochMs": { "type": "integer" },
+        "canEditSelfProfile": { "type": "boolean" },
+        "assignedRecordIds": { "type": "array" },
+        "fullNameBn": { "type": "string" },
+        "fullNameEn": { "type": "string" },
+        "fatherName": { "type": "string" },
+        "motherName": { "type": "string" },
+        "dateOfBirth": { "type": "string" },
+        "gender": { "type": "string" },
+        "bloodGroup": { "type": "string" },
+        "mobileNumber": { "type": "string" },
+        "emailAddress": { "type": "string" },
+        "photoBase64": { "type": "string" },
+        "institutionId": { "type": "string" },
+        "institutionName": { "type": "string" },
+        "institutionType": { "type": "string" },
+        "currentClassOrYear": { "type": "string" },
+        "educationalQualification": { "type": "string" },
+        "departmentOrSubject": { "type": "string" },
+        "academicInfo": { "type": "string" },
+        "careerGoal": { "type": "string" },
+        "personalIntro": { "type": "string" },
+        "skills": { "type": "string" },
+        "interests": { "type": "string" },
+        "orgLevel": { "type": "string" },
+        "orgDesignation": { "type": "string" },
+        "orgJoiningDate": { "type": "string" },
+        "orgStatus": { "type": "string" },
+        "orgAdditionalInfo": { "type": "string" },
+        "divisionId": { "type": "string" },
+        "divisionName": { "type": "string" },
+        "districtId": { "type": "string" },
+        "districtName": { "type": "string" },
+        "upazilaId": { "type": "string" },
+        "upazilaName": { "type": "string" },
+        "unionId": { "type": "string" },
+        "unionName": { "type": "string" },
+        "wardId": { "type": "string" },
+        "wardName": { "type": "string" },
+        "villageName": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "personalId", "passwordHash", "passwordSalt", "role", "active", "mustChangePassword",
+        "failedLoginAttempts", "lockedUntilEpochMs", "canEditSelfProfile", "assignedRecordIds",
+        "fullNameBn", "fullNameEn", "fatherName", "motherName", "dateOfBirth", "gender",
+        "bloodGroup", "mobileNumber", "emailAddress", "photoBase64",
+        "institutionId", "institutionName", "institutionType", "currentClassOrYear",
+        "educationalQualification", "departmentOrSubject", "academicInfo",
+        "careerGoal", "personalIntro", "skills", "interests",
+        "orgLevel", "orgDesignation", "orgJoiningDate", "orgStatus", "orgAdditionalInfo",
+        "divisionId", "divisionName", "districtId", "districtName", "upazilaId", "upazilaName",
+        "unionId", "unionName", "wardId", "wardName", "villageName",
+        "createdAt", "updatedAt"
+      ]
+    },
+    "LocationNode": {
+      "title": "Bangladesh Location Node",
+      "description": "Hierarchical Bangladesh administrative geography node.",
+      "type": "object",
+      "properties": {
+        "level": { "type": "string", "enum": ["DIVISION", "DISTRICT", "UPAZILA", "UNION", "WARD", "VILLAGE"] },
+        "parentId": { "type": "string" },
+        "nameBn": { "type": "string" },
+        "nameEn": { "type": "string" },
+        "code": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["level", "parentId", "nameBn", "nameEn", "code", "createdAt", "updatedAt"]
+    },
+    "EducationalInstitution": {
+      "title": "Educational Institution",
+      "description": "Educational institution mapped to Bangladesh administrative geography.",
+      "type": "object",
+      "properties": {
+        "nameBn": { "type": "string" },
+        "nameEn": { "type": "string" },
+        "institutionType": { "type": "string", "enum": ["SCHOOL", "COLLEGE", "MADRASA", "UNIVERSITY", "TECHNICAL", "OTHER"] },
+        "eiinCode": { "type": "string" },
+        "divisionId": { "type": "string" },
+        "districtId": { "type": "string" },
+        "upazilaId": { "type": "string" },
+        "unionId": { "type": "string" },
+        "wardId": { "type": "string" },
+        "locationLabel": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "nameBn", "nameEn", "institutionType", "eiinCode",
+        "divisionId", "districtId", "upazilaId", "unionId", "wardId",
+        "locationLabel", "createdAt", "updatedAt"
+      ]
+    },
+    "OrgPosition": {
+      "title": "Organizational Position",
+      "description": "Standard organizational hierarchy level and designation.",
+      "type": "object",
+      "properties": {
+        "levelNameBn": { "type": "string" },
+        "levelNameEn": { "type": "string" },
+        "designationBn": { "type": "string" },
+        "designationEn": { "type": "string" },
+        "rankOrder": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["levelNameBn", "levelNameEn", "designationBn", "designationEn", "rankOrder", "createdAt", "updatedAt"]
+    },
+    "VaultEntry": {
+      "title": "Encrypted Vault Entry",
+      "description": "AES-256-GCM encrypted personal credential, document metadata, or private note.",
+      "type": "object",
+      "properties": {
+        "ownerPersonalId": { "type": "string" },
+        "category": { "type": "string", "enum": ["CREDENTIAL", "DOCUMENT", "PRIVATE_NOTE"] },
+        "title": { "type": "string" },
+        "ciphertextBase64": { "type": "string" },
+        "ivBase64": { "type": "string" },
+        "saltBase64": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerPersonalId", "category", "title", "ciphertextBase64", "ivBase64", "saltBase64", "createdAt", "updatedAt"]
+    },
+    "ActivityLog": {
+      "title": "Audit & Login Activity Log",
+      "description": "Append-only security and administrative audit log.",
+      "type": "object",
+      "properties": {
+        "actorPersonalId": { "type": "string" },
+        "actorRole": { "type": "string" },
+        "actionType": { "type": "string" },
+        "targetPersonalId": { "type": "string" },
+        "summaryBn": { "type": "string" },
+        "summaryEn": { "type": "string" },
+        "status": { "type": "string", "enum": ["SUCCESS", "DENIED", "FAILED"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["actorPersonalId", "actorRole", "actionType", "targetPersonalId", "summaryBn", "summaryEn", "status", "createdAt"]
+    },
+    "AdminRecord": {
+      "title": "Trusted Admin Registry Entry",
+      "description": "Server-validated administrator grant entry keyed by Firebase Auth UID.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "ADMIN", "SUPER_ADMIN"] },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "email", "role", "active", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/AdminRecord" },
+      "description": "Trusted administrator role registry writable only by admins."
+    },
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/WorkspaceMeta" },
+      "description": "Authenticated workspace owner root document."
+    },
+    "/users/{userId}/settings/{settingId}": {
+      "schema": { "$ref": "#/entities/WebsiteSettings" },
+      "description": "Super Admin configurable branding and app settings."
+    },
+    "/users/{userId}/pims_accounts/{accountId}": {
+      "schema": { "$ref": "#/entities/PimsAccount" },
+      "description": "PIMS user accounts and comprehensive personal profiles."
+    },
+    "/users/{userId}/locations/{locationId}": {
+      "schema": { "$ref": "#/entities/LocationNode" },
+      "description": "Bangladesh cascading administrative location records."
+    },
+    "/users/{userId}/institutions/{institutionId}": {
+      "schema": { "$ref": "#/entities/EducationalInstitution" },
+      "description": "Location-linked educational institutions."
+    },
+    "/users/{userId}/org_positions/{positionId}": {
+      "schema": { "$ref": "#/entities/OrgPosition" },
+      "description": "Organizational positions and hierarchy ranks."
+    },
+    "/users/{userId}/vault_entries/{entryId}": {
+      "schema": { "$ref": "#/entities/VaultEntry" },
+      "description": "End-to-end encrypted personal vault items."
+    },
+    "/users/{userId}/activity_logs/{logId}": {
+      "schema": { "$ref": "#/entities/ActivityLog" },
+      "description": "Append-only login and admin audit logs."
+    }
+  }
+}

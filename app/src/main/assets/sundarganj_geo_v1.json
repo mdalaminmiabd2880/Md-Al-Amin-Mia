@@ -1,0 +1,1655 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "datasetId": "sundarganj_geo_v1",
+    "lastVerifiedAt": "2026-11-17",
+    "divisionId": "div_rangpur",
+    "divisionNameBn": "রংপুর",
+    "divisionNameEn": "Rangpur",
+    "districtId": "dist_gaibandha",
+    "districtNameBn": "গাইবান্ধা",
+    "districtNameEn": "Gaibandha",
+    "upazilaId": "upz_sundarganj",
+    "upazilaNameBn": "সুন্দরগঞ্জ",
+    "upazilaNameEn": "Sundarganj",
+    "upazilaCode": "3291",
+    "totalUnions": 15,
+    "wardsPerUnion": 9,
+    "totalWards": 135,
+    "upazilaVillageCountOfficial": 148,
+    "upazilaMouzaCountOfficial": 110,
+    "discrepancyAnalysisBn": "উপজেলা পোর্টাল (sundarganj.gaibandha.gov.bd)-এ সুন্দরগঞ্জ উপজেলায় ১টি পৌরসভা, ১৫টি ইউনিয়ন, ১১০টি মৌজা ও ১৪৮টি গ্রাম উল্লেখ আছে। তবে ১৫টি ইউনিয়ন পরিষদের পৃথক পোর্টাল ও সম্পূরক উৎসে (sundarganj.com/villages/) সংখ্যার পার্থক্য দেখা যায়: (১) সুন্দরগঞ্জ পৌরসভার ৯টি ওয়ার্ডের ১৩টি মহল্লা/এলাকা দহবন্দ ও বেলকা ইউনিয়নের প্রান্তিক গ্রামগুলোর (যেমন বামনজল, গোপালচরণ, হুড়াভায়া খাঁ, রামডাকুয়া) সাথে ওভারল্যাপ করে; (২) শান্তিরাম (দাপ্তরিক ৬টি বনাম উইকিপিডিয়ায় ২৬টি পাড়া/উপগ্রাম), ছাপরহাটী ও বামনডাঙ্গায় কিছু উৎস মৌজা/মূল গ্রাম ও পাড়া আলাদাভাবে গণনা করে; (৩) ধোপাডাঙ্গায় ১১টি গ্রাম উল্লিখিত হলেও দাপ্তরিক উন্মুক্ত পাতায় ৭টি গ্রামের নাম যাচাইযোগ্য এবং অবশিষ্ট নামগুলো ইউপি নথি থেকে যাচাইাধীন।",
+    "discrepancyAnalysisEn": "The official Upazila portal (sundarganj.gaibandha.gov.bd) reports 1 Pourashava, 15 Unions, 110 Mouzas, and 148 villages. Individual Union Parishad portals and supplementary directories (sundarganj.com/villages/) diverge because: (1) Sundarganj Pourashava's 13 mahallas overlap boundary areas of Dahoband and Belka unions; (2) some unions report main mouza-villages while census/wiki summaries count sub-paras or riverine chars separately (e.g., Shantiram 6 main vs 26 paras); and (3) Dhopadanga states 11 villages/9 mouzas officially while only 7 distinct village names are publicly confirmed in accessible UP/government records.",
+    "sources": [
+      {
+        "title": "সুন্দরগঞ্জ উপজেলা পোর্টাল (এক নজরে)",
+        "url": "https://sundarganj.gaibandha.gov.bd"
+      },
+      {
+        "title": "সুন্দরগঞ্জ উপজেলার গ্রামসমূহ (আমাদের সুন্দরগঞ্জ)",
+        "url": "https://sundarganj.com/villages/"
+      },
+      {
+        "title": "১নং বামনডাঙ্গা ইউনিয়ন পরিষদ",
+        "url": "https://bamandangaup.gaibandha.gov.bd"
+      },
+      {
+        "title": "২নং সোনারায় ইউনিয়ন পরিষদ",
+        "url": "https://sonarayup.gaibandha.gov.bd"
+      },
+      {
+        "title": "৩নং তারাপুর ইউনিয়ন পরিষদ",
+        "url": "https://tarapurup.gaibandha.gov.bd"
+      },
+      {
+        "title": "৪নং বেলকা ইউনিয়ন পরিষদ",
+        "url": "https://belkaup.gaibandha.gov.bd"
+      },
+      {
+        "title": "৫নং দহবন্দ ইউনিয়ন পরিষদ",
+        "url": "https://dahobandup.gaibandha.gov.bd"
+      },
+      {
+        "title": "৬নং সর্বানন্দ ইউনিয়ন পরিষদ",
+        "url": "https://sarbanandaup.gaibandha.gov.bd"
+      },
+      {
+        "title": "৭নং রামজীবন ইউনিয়ন পরিষদ",
+        "url": "https://ramjibonup.gaibandha.gov.bd"
+      },
+      {
+        "title": "৮নং ধোপাডাঙ্গা ইউনিয়ন পরিষদ",
+        "url": "https://dhopadangaup.gaibandha.gov.bd"
+      },
+      {
+        "title": "৯নং ছাপরহাটী ইউনিয়ন পরিষদ",
+        "url": "https://chhaparhatiup.gaibandha.gov.bd"
+      },
+      {
+        "title": "১০নং শান্তিরাম ইউনিয়ন পরিষদ",
+        "url": "https://shantiramup.gaibandha.gov.bd"
+      },
+      {
+        "title": "১১নং হরিপুর ইউনিয়ন পরিষদ",
+        "url": "https://haripurup.gaibandha.gov.bd"
+      },
+      {
+        "title": "১২নং কঞ্চিবাড়ী ইউনিয়ন পরিষদ",
+        "url": "https://kanchibariup.gaibandha.gov.bd"
+      },
+      {
+        "title": "১৩নং শ্রীপুর ইউনিয়ন পরিষদ",
+        "url": "https://sreepurup.gaibandha.gov.bd"
+      },
+      {
+        "title": "১৪নং চন্ডিপুর ইউনিয়ন পরিষদ",
+        "url": "https://chandipurup.gaibandha.gov.bd"
+      },
+      {
+        "title": "১৫নং কাপাসিয়া ইউনিয়ন পরিষদ",
+        "url": "https://kapasiaup.gaibandha.gov.bd"
+      }
+    ]
+  },
+  "unions": [
+    {
+      "id": "un_sundarganj_01_bamandanga",
+      "code": "01",
+      "nameBn": "বামনডাঙ্গা",
+      "nameEn": "Bamandanga",
+      "aliasesBn": ["বামনডাংগা"],
+      "officialVillageCount": 15,
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd",
+      "verificationStatus": "CONFLICT",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "দাপ্তরিক নথিতে ১৩টি স্বতন্ত্র গ্রামের নাম সংগৃহীত (মোট ১৫টি উল্লেখ থাকায় ২টি উপ-গ্রাম/পাড়ার বিভাজন যাচাইাধীন)। শুধু ২নং ওয়ার্ডে পাইটকাপাড়া নিশ্চিত।",
+      "notesEn": "13 distinct villages collected (official note cites 15 total; 2 sub-villages unconfirmed). Only Ward 2 (Paitkapara) verified."
+    },
+    {
+      "id": "un_sundarganj_02_sonaray",
+      "code": "02",
+      "nameBn": "সোনারায়",
+      "nameEn": "Sonaray",
+      "aliasesBn": ["সোনারায়"],
+      "officialVillageCount": 9,
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd",
+      "verificationStatus": "VERIFIED",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "৯টি গ্রাম এবং ১–৯ নং ওয়ার্ডের সম্পূর্ণ বিন্যাস দাপ্তরিক পোর্টাল থেকে যাচাইকৃত।",
+      "notesEn": "All 9 villages and 1-to-1 mappings to Wards 1-9 verified from official UP portal."
+    },
+    {
+      "id": "un_sundarganj_03_tarapur",
+      "code": "03",
+      "nameBn": "তারাপুর",
+      "nameEn": "Tarapur",
+      "aliasesBn": [],
+      "officialVillageCount": 8,
+      "sourceUrl": "https://tarapurup.gaibandha.gov.bd",
+      "verificationStatus": "VERIFIED",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "ওয়ার্ড ১–৬ নির্দিষ্ট গ্রাম ও ওয়ার্ড ৭–৯ তারাপুর মৌজাভিত্তিক এলাকা হিসেবে দাপ্তরিকভাবে যাচাইকৃত; নাচনী ঘগোয়া ওয়ার্ড যাচাইাধীন।",
+      "notesEn": "Wards 1-6 specific villages and Wards 7-9 within Tarapur verified; Nachni Ghagoa ward awaits verification."
+    },
+    {
+      "id": "un_sundarganj_04_belka",
+      "code": "04",
+      "nameBn": "বেলকা",
+      "nameEn": "Belka",
+      "aliasesBn": [],
+      "officialVillageCount": 11,
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd",
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "১১টি গ্রাম দাপ্তরিক পোর্টাল থেকে যাচাইকৃত; ওয়ার্ড-ভিত্তিক গ্রাম বিন্যাস যাচাইাধীন।",
+      "notesEn": "11 official villages verified from UP portal; ward-to-village mapping awaits official verification."
+    },
+    {
+      "id": "un_sundarganj_05_dahoband",
+      "code": "05",
+      "nameBn": "দহবন্দ",
+      "nameEn": "Dahoband",
+      "aliasesBn": ["দহবন্ধ"],
+      "officialVillageCount": 9,
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd",
+      "verificationStatus": "CONFLICT",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "দাপ্তরিক পোর্টালে হুড়াভায়া খাঁ ও আরাজী দহবন্দ একত্রে (মোট ৯টি), sundarganj.com-এ পৃথকভাবে ১০টি; বামনজল, গোপালচরণ ও হুড়াভায়া খাঁ অংশত সুন্দরগঞ্জ পৌরসভায় পড়েছে। ওয়ার্ড বিন্যাস যাচাইাধীন।",
+      "notesEn": "9 combined entries on UP portal vs 10 separate entries on sundarganj.com; partial overlap with Sundarganj Pourashava. Ward mapping unverified."
+    },
+    {
+      "id": "un_sundarganj_06_sarbananda",
+      "code": "06",
+      "nameBn": "সর্বানন্দ",
+      "nameEn": "Sarbananda",
+      "aliasesBn": ["সর্ব্বানন্দ"],
+      "officialVillageCount": 9,
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd",
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "৯টি গ্রাম জাতীয় তথ্য বাতায়ন ও সুন্দরগঞ্জ ডিরেক্টরি থেকে যাচাইকৃত; ওয়ার্ড-ভিত্তিক গ্রাম বিন্যাস যাচাইাধীন।",
+      "notesEn": "9 villages verified from UP portal; ward-to-village mapping awaits verification."
+    },
+    {
+      "id": "un_sundarganj_07_ramjibon",
+      "code": "07",
+      "nameBn": "রামজীবন",
+      "nameEn": "Ramjibon",
+      "aliasesBn": ["রামজিবন"],
+      "officialVillageCount": 10,
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd",
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "১০টি গ্রাম ও ১০টি মৌজা দাপ্তরিক পোর্টাল থেকে যাচাইকৃত; ওয়ার্ড-ভিত্তিক গ্রাম বিন্যাস যাচাইাধীন।",
+      "notesEn": "All 10 official villages verified from UP portal; ward-to-village mapping awaits verification."
+    },
+    {
+      "id": "un_sundarganj_08_dhopadanga",
+      "code": "08",
+      "nameBn": "ধোপাডাঙ্গা",
+      "nameEn": "Dhopadanga",
+      "aliasesBn": ["ধোপাডাংগা"],
+      "officialVillageCount": 11,
+      "sourceUrl": "https://dhopadangaup.gaibandha.gov.bd",
+      "verificationStatus": "CONFLICT",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "দাপ্তরিক তথ্যে ১১টি গ্রাম ও ৯টি মৌজা উল্লিখিত; উন্মুক্ত সরকারি নথিতে ৭টি গ্রাম যাচাইকৃত (হাতিয়া ২নং ওয়ার্ড) এবং অবশিষ্ট গ্রামসমূহ অ্যাডমিন যাচাইয়ের জন্য অপেক্ষমাণ।",
+      "notesEn": "11 villages / 9 mouzas cited officially; 7 distinct villages publicly confirmed in UP/govt records, remaining records pending admin verification."
+    },
+    {
+      "id": "un_sundarganj_09_chhaparhati",
+      "code": "09",
+      "nameBn": "ছাপরহাটী",
+      "nameEn": "Chhaparhati",
+      "aliasesBn": ["ছাপরহাটি", "ছাপড়হাটী", "ছাপড়হাটি"],
+      "officialVillageCount": 7,
+      "sourceUrl": "https://chhaparhatiup.gaibandha.gov.bd",
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "ইউপি পোর্টালে ৭টি প্রধান গ্রাম (৯টি মৌজা) উল্লিখিত; ওয়ার্ড-ভিত্তিক গ্রাম বিন্যাস যাচাইাধীন।",
+      "notesEn": "7 official main villages (9 mouzas) on UP portal; ward-to-village mapping awaits verification."
+    },
+    {
+      "id": "un_sundarganj_10_shantiram",
+      "code": "10",
+      "nameBn": "শান্তিরাম",
+      "nameEn": "Shantiram",
+      "aliasesBn": [],
+      "officialVillageCount": 6,
+      "sourceUrl": "https://shantiramup.gaibandha.gov.bd",
+      "verificationStatus": "CONFLICT",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "ইউপি গ্রামভিত্তিক লোকসংখ্যা পাতায় ৬টি মূল গ্রাম উল্লিখিত (পাড়াসহ ৮টি নাম সংগৃহীত), উইকিপিডিয়ায় ২৬টি ছোট-বড় গ্রাম/পাড়া উল্লেখ রয়েছে। ওয়ার্ড ১ (পশ্চিম পরান) ও ওয়ার্ড ৯ (খামার ধুবনী) যাচাইকৃত।",
+      "notesEn": "UP population page lists 6 main villages (8 names incl. sub-areas collected), while Wikipedia cites 26 small villages/paras. Wards 1 and 9 partially verified."
+    },
+    {
+      "id": "un_sundarganj_11_haripur",
+      "code": "11",
+      "nameBn": "হরিপুর",
+      "nameEn": "Haripur",
+      "aliasesBn": ["হারিপুর"],
+      "officialVillageCount": 11,
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd",
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "১১টি গ্রাম ও ৯টি মৌজা ইউপি পোর্টাল থেকে যাচাইকৃত; ওয়ার্ড-ভিত্তিক গ্রাম বিন্যাস যাচাইাধীন।",
+      "notesEn": "11 villages (9 mouzas) collected from Haripur UP portal; ward-to-village mapping awaits verification."
+    },
+    {
+      "id": "un_sundarganj_12_kanchibari",
+      "code": "12",
+      "nameBn": "কঞ্চিবাড়ী",
+      "nameEn": "Kanchibari",
+      "aliasesBn": ["কঞ্চিবাড়ী", "কঞ্চিবারি"],
+      "officialVillageCount": 6,
+      "sourceUrl": "https://kanchibariup.gaibandha.gov.bd",
+      "verificationStatus": "VERIFIED",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "৬টি গ্রাম এবং ১–৯ নং ওয়ার্ডের সম্পূর্ণ বিন্যাস ইউপি পোর্টাল থেকে যাচাইকৃত।",
+      "notesEn": "All 6 villages and complete Wards 1-9 distribution verified from Kanchibari UP portal."
+    },
+    {
+      "id": "un_sundarganj_13_sreepur",
+      "code": "13",
+      "nameBn": "শ্রীপুর",
+      "nameEn": "Sreepur",
+      "aliasesBn": [],
+      "officialVillageCount": 6,
+      "sourceUrl": "https://sreepurup.gaibandha.gov.bd",
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "৬টি গ্রাম ও ৬টি মৌজা সংগৃহীত; ওয়ার্ড-ভিত্তিক গ্রাম বিন্যাস যাচাইাধীন।",
+      "notesEn": "6 villages / 6 mouzas collected; ward-to-village mapping awaits verification."
+    },
+    {
+      "id": "un_sundarganj_14_chandipur",
+      "code": "14",
+      "nameBn": "চন্ডিপুর",
+      "nameEn": "Chandipur",
+      "aliasesBn": ["চন্ডীপুর"],
+      "officialVillageCount": 3,
+      "sourceUrl": "https://chandipurup.gaibandha.gov.bd",
+      "verificationStatus": "VERIFIED",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "৩টি প্রধান গ্রাম ও ১–৯ নং ওয়ার্ডের সম্পূর্ণ বিভাজন ইউপি পোর্টাল থেকে যাচাইকৃত।",
+      "notesEn": "All 3 main villages across Wards 1-9 verified from Chandipur UP portal."
+    },
+    {
+      "id": "un_sundarganj_15_kapasia",
+      "code": "15",
+      "nameBn": "কাপাসিয়া",
+      "nameEn": "Kapasia",
+      "aliasesBn": ["কাপাসিয়া"],
+      "officialVillageCount": 15,
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd",
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "lastVerifiedAt": "2026-11-17",
+      "notesBn": "১৫টি গ্রাম ইউপি পোর্টাল থেকে সংগৃহীত। ওয়ার্ড ১ (চর কাপাসিয়া) ও ওয়ার্ড ৬ (ভাটিকাপাসিয়া) যাচাইকৃত; অবশিষ্ট গ্রামগুলোর ওয়ার্ড বিন্যাস যাচাইাধীন।",
+      "notesEn": "All 15 official villages collected. Wards 1 and 6 verified; remaining villages' ward assignments await verification."
+    }
+  ],
+  "villages": [
+    {
+      "id": "vil_01_jamal",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "জামাল",
+      "nameEn": "Jamal",
+      "aliasesBn": ["জামালতালুক ফলগাছা"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd",
+      "conflictNoteBn": "ওয়ার্ড বিন্যাস যাচাইাধীন; sundarganj.com-এ জামালতালুক ফলগাছা নামে তালিকাভুক্ত।",
+      "conflictNoteEn": "Ward unverified; listed as Jamaltaluk Pholgachha on sundarganj.com."
+    },
+    {
+      "id": "vil_01_boldipara",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "বলদীপাড়া",
+      "nameEn": "Boldipara",
+      "aliasesBn": ["বলদীপাড়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_hatibandha",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "হাতীবান্ধা",
+      "nameEn": "Hatibandha",
+      "aliasesBn": ["হাতিবান্ধা"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_paitkapara",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "পাইটকাপাড়া",
+      "nameEn": "Paitkapara",
+      "aliasesBn": ["পাইটকাপাড়া", "পাইটকাপারা"],
+      "verifiedWardNumbers": [2],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd",
+      "conflictNoteBn": "বামনডাঙ্গা ইউপি ২নং ওয়ার্ড সদস্যের দাপ্তরিক ঠিকানায় যাচাইকৃত।",
+      "conflictNoteEn": "Verified via Ward 2 UP representative address on Bamandanga UP portal."
+    },
+    {
+      "id": "vil_01_ramdeb",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "রামদেব",
+      "nameEn": "Ramdeb",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_ramdhan",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "রামধন",
+      "nameEn": "Ramdhan",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_deodoba",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "দেওডোবা",
+      "nameEn": "Deodoba",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_taluk_pholgachha",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "তালুক ফলগাছা",
+      "nameEn": "Taluk Pholgachha",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_satgiri",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "সাতগিরি",
+      "nameEn": "Satgiri",
+      "aliasesBn": ["সাতগিড়ি", "সাতগিড়ি"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_monmoth",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "মনমথ",
+      "nameEn": "Monmoth",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_moniram",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "মনিরাম",
+      "nameEn": "Moniram",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_pholgachha",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "ফলগাছা",
+      "nameEn": "Pholgachha",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_01_moniram_kazi",
+      "unionId": "un_sundarganj_01_bamandanga",
+      "nameBn": "মনিরাম কাজী",
+      "nameEn": "Moniram Kazi",
+      "aliasesBn": ["মনিরাম কাজি"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://bamandangaup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_02_chandra",
+      "unionId": "un_sundarganj_02_sonaray",
+      "nameBn": "চন্দ্র",
+      "nameEn": "Chandra",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [1],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_02_purbo_sonaray",
+      "unionId": "un_sundarganj_02_sonaray",
+      "nameBn": "পূর্ব সোনারায়",
+      "nameEn": "Purba Sonaray",
+      "aliasesBn": ["পূর্ব সোনারায়"],
+      "verifiedWardNumbers": [2],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_02_paschim_sonaray",
+      "unionId": "un_sundarganj_02_sonaray",
+      "nameBn": "পশ্চিম সোনারায়",
+      "nameEn": "Paschim Sonaray",
+      "aliasesBn": ["পশ্চিম সোনারায়"],
+      "verifiedWardNumbers": [3],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_02_balaram",
+      "unionId": "un_sundarganj_02_sonaray",
+      "nameBn": "বলরাম",
+      "nameEn": "Balaram",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [4],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_02_purbo_shibram",
+      "unionId": "un_sundarganj_02_sonaray",
+      "nameBn": "পূর্ব শিবরাম",
+      "nameEn": "Purba Shibram",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [5],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_02_paschim_shibram",
+      "unionId": "un_sundarganj_02_sonaray",
+      "nameBn": "পশ্চিম শিবরাম",
+      "nameEn": "Paschim Shibram",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [6],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_02_paschim_baidyanath",
+      "unionId": "un_sundarganj_02_sonaray",
+      "nameBn": "পশ্চিম বৈদ্যনাথ",
+      "nameEn": "Paschim Baidyanath",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [7],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_02_purbo_baidyanath",
+      "unionId": "un_sundarganj_02_sonaray",
+      "nameBn": "পূর্ব বৈদ্যনাথ",
+      "nameEn": "Purba Baidyanath",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [8],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_02_fatekhan",
+      "unionId": "un_sundarganj_02_sonaray",
+      "nameBn": "ফতেখাঁ",
+      "nameEn": "Fatekhan",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [9],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://sonarayup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_03_ghagoa",
+      "unionId": "un_sundarganj_03_tarapur",
+      "nameBn": "ঘগোয়া",
+      "nameEn": "Ghagoa",
+      "aliasesBn": ["ঘগোয়া"],
+      "verifiedWardNumbers": [1],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://tarapurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_03_chachia_mirganj",
+      "unionId": "un_sundarganj_03_tarapur",
+      "nameBn": "চাচিয়া মীরগঞ্জ",
+      "nameEn": "Chachia Mirganj",
+      "aliasesBn": ["চাচিয়া মীরগঞ্জ", "চাচিয়া"],
+      "verifiedWardNumbers": [2],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://tarapurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_03_nowhati_chachia",
+      "unionId": "un_sundarganj_03_tarapur",
+      "nameBn": "নওহাটি চাচিয়া",
+      "nameEn": "Nowhati Chachia",
+      "aliasesBn": ["নওহাটি", "নওহাটি চাচিয়া"],
+      "verifiedWardNumbers": [3],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://tarapurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_03_nijamkhan",
+      "unionId": "un_sundarganj_03_tarapur",
+      "nameBn": "নিজামখাঁ",
+      "nameEn": "Nijamkhan",
+      "aliasesBn": ["নিজাম খাঁ"],
+      "verifiedWardNumbers": [4],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://tarapurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_03_char_khordda",
+      "unionId": "un_sundarganj_03_tarapur",
+      "nameBn": "চর খোর্দ্দা",
+      "nameEn": "Char Khordda",
+      "aliasesBn": ["খোর্দ্দা"],
+      "verifiedWardNumbers": [5],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://tarapurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_03_latshala",
+      "unionId": "un_sundarganj_03_tarapur",
+      "nameBn": "লাটশালা",
+      "nameEn": "Latshala",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [6],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://tarapurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_03_tarapur",
+      "unionId": "un_sundarganj_03_tarapur",
+      "nameBn": "তারাপুর",
+      "nameEn": "Tarapur",
+      "aliasesBn": ["মধ্য তারাপুর"],
+      "verifiedWardNumbers": [7, 8, 9],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://tarapurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_03_nachni_ghagoa",
+      "unionId": "un_sundarganj_03_tarapur",
+      "nameBn": "নাচনী ঘগোয়া",
+      "nameEn": "Nachni Ghagoa",
+      "aliasesBn": ["নাচনী ঘগোয়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://tarapurup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_04_ramdakua",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "রামডাকুয়া",
+      "nameEn": "Ramdakua",
+      "aliasesBn": ["রামডাকুয়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_bekrir_char",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "বেকরীর চর",
+      "nameEn": "Bekrir Char",
+      "aliasesBn": ["বেকরীরচর"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_taluk_belka",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "তালুক বেলকা",
+      "nameEn": "Taluk Belka",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_majhbari",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "মাঝবাড়ী",
+      "nameEn": "Majhbari",
+      "aliasesBn": ["মাঝবাড়ী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_jigabari",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "জিগাবাড়ী",
+      "nameEn": "Jigabari",
+      "aliasesBn": ["জিগাবাড়ী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_panchananda",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "পঞ্চানন্দ",
+      "nameEn": "Panchananda",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_belka_nababganj",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "বেলকা নবাবগঞ্জ",
+      "nameEn": "Belka Nababganj",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_kishamat_sadar",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "কিশামত সদর",
+      "nameEn": "Kishamat Sadar",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_purbo_belka",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "পূর্ব বেলকা",
+      "nameEn": "Purba Belka",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_moddho_belka",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "মধ্য বেলকা",
+      "nameEn": "Madhya Belka",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_04_paschim_belka",
+      "unionId": "un_sundarganj_04_belka",
+      "nameBn": "পশ্চিম বেলকা",
+      "nameEn": "Paschim Belka",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://belkaup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_05_uttar_bamonjal",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "উত্তর বামনজল",
+      "nameEn": "Uttar Bamonjal",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_05_dakshin_bamonjal",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "দক্ষিণ বামনজল",
+      "nameEn": "Dakshin Bamonjal",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_05_gopalcharan",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "গোপালচরণ",
+      "nameEn": "Gopalcharan",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_05_arazi_dahoband",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "আরাজী দহবন্দ",
+      "nameEn": "Arazi Dahoband",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "CONFLICT",
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd",
+      "conflictNoteBn": "ইউপি পোর্টালে হুড়াভায়া খাঁ-এর সাথে একত্রে উল্লেখ; sundarganj.com-এ পৃথক গ্রাম। ওয়ার্ড বিন্যাস যাচাইাধীন।",
+      "conflictNoteEn": "Grouped with Hurabhaya Khan on UP portal, separated on sundarganj.com."
+    },
+    {
+      "id": "vil_05_hurabhaya_khan",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "হুড়াভায়া খাঁ",
+      "nameEn": "Hurabhaya Khan",
+      "aliasesBn": ["হুড়াভায়া খাঁ"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "CONFLICT",
+      "sourceUrl": "https://sundarganj.com/villages/",
+      "conflictNoteBn": "দহবন্দ ইউপি ও সুন্দরগঞ্জ পৌরসভার অংশে বিদ্যমান; ওয়ার্ড বিন্যাস যাচাইাধীন।",
+      "conflictNoteEn": "Overlaps with Sundarganj Pourashava wards 4-5."
+    },
+    {
+      "id": "vil_05_jormondi",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "জরমনদী",
+      "nameEn": "Jormondi",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_05_paschim_jhinia",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "পশ্চিম ঝিনিয়া",
+      "nameEn": "Paschim Jhinia",
+      "aliasesBn": ["পশ্চিম ঝিনিয়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_05_purbo_jhinia",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "পূর্ব ঝিনিয়া",
+      "nameEn": "Purba Jhinia",
+      "aliasesBn": ["পূর্ব ঝিনিয়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_05_uttar_dhumaitari",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "উত্তর ধুমাইটারী",
+      "nameEn": "Uttar Dhumaitari",
+      "aliasesBn": ["উত্তর ঢুমাইটারী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_05_dakshin_dhumaitari",
+      "unionId": "un_sundarganj_05_dahoband",
+      "nameBn": "দক্ষিণ ধুমাইটারী",
+      "nameEn": "Dakshin Dhumaitari",
+      "aliasesBn": ["দক্ষিণ ঢুমাইটারী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dahobandup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_06_uttar_shahabaz",
+      "unionId": "un_sundarganj_06_sarbananda",
+      "nameBn": "উত্তর শাহাবাজ",
+      "nameEn": "Uttar Shahabaz",
+      "aliasesBn": ["উত্তর সাহাবাজ"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_06_moddho_shahabaz",
+      "unionId": "un_sundarganj_06_sarbananda",
+      "nameBn": "মধ্য শাহাবাজ",
+      "nameEn": "Madhya Shahabaz",
+      "aliasesBn": ["মধ্য সাহাবাজ"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_06_dakshin_shahabaz",
+      "unionId": "un_sundarganj_06_sarbananda",
+      "nameBn": "দক্ষিণ শাহাবাজ",
+      "nameEn": "Dakshin Shahabaz",
+      "aliasesBn": ["দক্ষিণ সাহাবাজ"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_06_kishamot_sarbananda",
+      "unionId": "un_sundarganj_06_sarbananda",
+      "nameBn": "কিসামত সর্বানন্দ",
+      "nameEn": "Kishamot Sarbananda",
+      "aliasesBn": ["কিশামত সর্বানন্দ"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_06_rambhadra",
+      "unionId": "un_sundarganj_06_sarbananda",
+      "nameBn": "রামভদ্র",
+      "nameEn": "Rambhadra",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_06_taluk_bazit",
+      "unionId": "un_sundarganj_06_sarbananda",
+      "nameBn": "তালুক বাজিত",
+      "nameEn": "Taluk Bazit",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_06_purbo_bachhati",
+      "unionId": "un_sundarganj_06_sarbananda",
+      "nameBn": "পূর্ব বাছহাটি",
+      "nameEn": "Purba Bachhati",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_06_paschim_bachhati",
+      "unionId": "un_sundarganj_06_sarbananda",
+      "nameBn": "পশ্চিম বাছহাটি",
+      "nameEn": "Paschim Bachhati",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_06_taluk_sarbananda",
+      "unionId": "un_sundarganj_06_sarbananda",
+      "nameBn": "তালুক সর্বানন্দ",
+      "nameEn": "Taluk Sarbananda",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sarbanandaup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_07_purbo_ramjibon",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "পূর্ব রামজীবন",
+      "nameEn": "Purba Ramjibon",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_07_paschim_ramjibon",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "পশ্চিম রামজীবন",
+      "nameEn": "Paschim Ramjibon",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_07_nijpara",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "নিজপাড়া",
+      "nameEn": "Nijpara",
+      "aliasesBn": ["নিজপাড়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_07_bazarpara",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "বাজারপাড়া",
+      "nameEn": "Bazarpara",
+      "aliasesBn": ["বাজারপাড়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_07_bhobanipur",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "ভবানীপুর",
+      "nameEn": "Bhobanipur",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_07_uttar_bekatari",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "উত্তর বেকাটারী",
+      "nameEn": "Uttar Bekatari",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_07_dakshin_bekatari",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "দক্ষিণ বেকাটারী",
+      "nameEn": "Dakshin Bekatari",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_07_subornodoho",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "সুবর্ণদহ",
+      "nameEn": "Subornodoho",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_07_kashdoho",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "কাশদহ",
+      "nameEn": "Kashdoho",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_07_kekoi_kashdoho",
+      "unionId": "un_sundarganj_07_ramjibon",
+      "nameBn": "কে কৈ কাশদহ",
+      "nameEn": "Ke Koi Kashdoho",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://ramjibonup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_08_bojra_holdia",
+      "unionId": "un_sundarganj_08_dhopadanga",
+      "nameBn": "বজরা হলদিয়া",
+      "nameEn": "Bojra Holdia",
+      "aliasesBn": ["বজরা হলদিয়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dhopadangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_08_kishamot_holdia",
+      "unionId": "un_sundarganj_08_dhopadanga",
+      "nameBn": "কিশামত হলদিয়া",
+      "nameEn": "Kishamot Holdia",
+      "aliasesBn": ["কিশামত হলদিয়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dhopadangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_08_hatia",
+      "unionId": "un_sundarganj_08_dhopadanga",
+      "nameBn": "হাতিয়া",
+      "nameEn": "Hatia",
+      "aliasesBn": ["হাতিয়া"],
+      "verifiedWardNumbers": [2],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://dhopadangaup.gaibandha.gov.bd",
+      "conflictNoteBn": "ধোপাডাঙ্গা ইউপি ২নং ওয়ার্ড প্রকল্প নথিতে নিশ্চিত।",
+      "conflictNoteEn": "Confirmed in Ward 2 project records on Dhopadanga UP portal."
+    },
+    {
+      "id": "vil_08_uttar_rajibpur",
+      "unionId": "un_sundarganj_08_dhopadanga",
+      "nameBn": "উত্তর রাজিবপুর",
+      "nameEn": "Uttar Rajibpur",
+      "aliasesBn": ["উত্তর রাজীবপুর"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dhopadangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_08_dakshin_rajibpur",
+      "unionId": "un_sundarganj_08_dhopadanga",
+      "nameBn": "দক্ষিণ রাজিবপুর",
+      "nameEn": "Dakshin Rajibpur",
+      "aliasesBn": ["দক্ষিণ রাজীবপুর"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dhopadangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_08_paschim_rajibpur",
+      "unionId": "un_sundarganj_08_dhopadanga",
+      "nameBn": "পশ্চিম রাজিবপুর",
+      "nameEn": "Paschim Rajibpur",
+      "aliasesBn": ["পশ্চিম রাজীবপুর"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dhopadangaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_08_choyghoria",
+      "unionId": "un_sundarganj_08_dhopadanga",
+      "nameBn": "ছয়ঘড়িয়া",
+      "nameEn": "Choyghoria",
+      "aliasesBn": ["ছয়ঘড়িয়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://dhopadangaup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_09_khamar_panchgachhi",
+      "unionId": "un_sundarganj_09_chhaparhati",
+      "nameBn": "খামার পাঁচগাছি",
+      "nameEn": "Khamar Panchgachhi",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://chhaparhatiup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_09_uttar_moruadaho",
+      "unionId": "un_sundarganj_09_chhaparhati",
+      "nameBn": "উত্তর মরুয়াদহ",
+      "nameEn": "Uttar Moruadaho",
+      "aliasesBn": ["উত্তর মরুয়াদহ"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://chhaparhatiup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_09_dakshin_moruadaho",
+      "unionId": "un_sundarganj_09_chhaparhati",
+      "nameBn": "দক্ষিণ মরুয়াদহ",
+      "nameEn": "Dakshin Moruadaho",
+      "aliasesBn": ["দক্ষিণ মরুয়াদহ"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://chhaparhatiup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_09_dhapachila",
+      "unionId": "un_sundarganj_09_chhaparhati",
+      "nameBn": "ধাপাচিলা",
+      "nameEn": "Dhapachila",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://chhaparhatiup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_09_purbo_chhaparhati",
+      "unionId": "un_sundarganj_09_chhaparhati",
+      "nameBn": "পূর্ব ছাপড়হাটী",
+      "nameEn": "Purba Chhaparhati",
+      "aliasesBn": ["পূর্ব ছাপড়হাটী", "পূর্ব ছাপরহাটী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://chhaparhatiup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_09_paschim_chhaparhati",
+      "unionId": "un_sundarganj_09_chhaparhati",
+      "nameBn": "পশ্চিম ছাপড়হাটী",
+      "nameEn": "Paschim Chhaparhati",
+      "aliasesBn": ["পশ্চিম ছাপড়হাটী", "পশ্চিম ছাপরহাটী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://chhaparhatiup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_09_chhomirer_bazar",
+      "unionId": "un_sundarganj_09_chhaparhati",
+      "nameBn": "ছমিরের বাজার",
+      "nameEn": "Chhomirer Bazar",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://chhaparhatiup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_10_paschim_paran",
+      "unionId": "un_sundarganj_10_shantiram",
+      "nameBn": "পশ্চিম পরান",
+      "nameEn": "Paschim Paran",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [1],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://shantiramup.gaibandha.gov.bd",
+      "conflictNoteBn": "শান্তিরাম ইউপি ১নং ওয়ার্ড সদস্যের দাপ্তরিক ঠিকানায় যাচাইকৃত।",
+      "conflictNoteEn": "Verified via Ward 1 UP representative address on Shantiram UP portal."
+    },
+    {
+      "id": "vil_10_moddho_paran",
+      "unionId": "un_sundarganj_10_shantiram",
+      "nameBn": "মধ্য পরান",
+      "nameEn": "Madhya Paran",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://shantiramup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_10_uttar_paran",
+      "unionId": "un_sundarganj_10_shantiram",
+      "nameBn": "উত্তর পরান",
+      "nameEn": "Uttar Paran",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://shantiramup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_10_shantiram",
+      "unionId": "un_sundarganj_10_shantiram",
+      "nameBn": "শান্তিরাম",
+      "nameEn": "Shantiram",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://shantiramup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_10_purbo_shantiram",
+      "unionId": "un_sundarganj_10_shantiram",
+      "nameBn": "পূর্ব শান্তিরাম",
+      "nameEn": "Purba Shantiram",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://shantiramup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_10_moddho_shantiram",
+      "unionId": "un_sundarganj_10_shantiram",
+      "nameBn": "মধ্য শান্তিরাম",
+      "nameEn": "Madhya Shantiram",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://shantiramup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_10_panchgachhi_shantiram",
+      "unionId": "un_sundarganj_10_shantiram",
+      "nameBn": "পাঁচগাছি শান্তিরাম",
+      "nameEn": "Panchgachhi Shantiram",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://shantiramup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_10_khamar_dhubni",
+      "unionId": "un_sundarganj_10_shantiram",
+      "nameBn": "খামার ধুবনী",
+      "nameEn": "Khamar Dhubni",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [9],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://shantiramup.gaibandha.gov.bd",
+      "conflictNoteBn": "শান্তিরাম ইউপি ৯নং ওয়ার্ড সদস্যের দাপ্তরিক ঠিকানায় যাচাইকৃত।",
+      "conflictNoteEn": "Verified via Ward 9 UP representative address on Shantiram UP portal."
+    },
+
+    {
+      "id": "vil_11_lokhiar_para",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "লখিয়ার পাড়া",
+      "nameEn": "Lokhiar Para",
+      "aliasesBn": ["লখিয়ার পাড়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_madari_para",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "মাদারী পাড়া",
+      "nameEn": "Madari Para",
+      "aliasesBn": ["মাদারী পাড়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_char_madari_para",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "চর মাদারী পাড়া",
+      "nameEn": "Char Madari Para",
+      "aliasesBn": ["চর মাদারী পাড়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_parasadua",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "পাড়াসাদুয়া",
+      "nameEn": "Parasadua",
+      "aliasesBn": ["পাড়াসাদুয়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_purbo_parasadua",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "পূর্ব পাড়াসাদুয়া",
+      "nameEn": "Purba Parasadua",
+      "aliasesBn": ["পূর্ব পাড়াসাদুয়া"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_raghob_kani",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "রাঘব কানি",
+      "nameEn": "Raghob Kani",
+      "aliasesBn": ["রাঘব"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_charitabari",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "চরিতাবাড়ী",
+      "nameEn": "Charitabari",
+      "aliasesBn": ["চরিতাবাড়ী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_kani_charitabari",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "কানি চরিতাবাড়ী",
+      "nameEn": "Kani Charitabari",
+      "aliasesBn": ["কানি চরিতাবাড়ী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_char_charitabari",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "চর চরিতাবাড়ী",
+      "nameEn": "Char Charitabari",
+      "aliasesBn": ["চরিতাবাড়ী চর", "চরিতাবাড়ী চর"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_ujan_teora",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "উজান তেওরা",
+      "nameEn": "Ujan Teora",
+      "aliasesBn": ["তেওরা"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_11_haripur",
+      "unionId": "un_sundarganj_11_haripur",
+      "nameBn": "হরিপুর",
+      "nameEn": "Haripur",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://haripurup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_12_choyghoria",
+      "unionId": "un_sundarganj_12_kanchibari",
+      "nameBn": "ছয়ঘড়িয়া",
+      "nameEn": "Choyghoria",
+      "aliasesBn": ["ছয়ঘড়িয়া"],
+      "verifiedWardNumbers": [1],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://kanchibariup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_12_kalirkhamar",
+      "unionId": "un_sundarganj_12_kanchibari",
+      "nameBn": "কালিরখামার",
+      "nameEn": "Kalirkhamar",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [2, 3],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://kanchibariup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_12_kanchibari",
+      "unionId": "un_sundarganj_12_kanchibari",
+      "nameBn": "কঞ্চিবাড়ী",
+      "nameEn": "Kanchibari",
+      "aliasesBn": ["কঞ্চিবাড়ী"],
+      "verifiedWardNumbers": [4, 5],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://kanchibariup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_12_satirjan",
+      "unionId": "un_sundarganj_12_kanchibari",
+      "nameBn": "সতীরজান",
+      "nameEn": "Satirjan",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [6],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://kanchibariup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_12_bojra_kanchibari",
+      "unionId": "un_sundarganj_12_kanchibari",
+      "nameBn": "বজরা কঞ্চিবাড়ী",
+      "nameEn": "Bojra Kanchibari",
+      "aliasesBn": ["বজরা কঞ্চিবাড়ী"],
+      "verifiedWardNumbers": [7],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://kanchibariup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_12_dulal",
+      "unionId": "un_sundarganj_12_kanchibari",
+      "nameBn": "দুলাল",
+      "nameEn": "Dulal",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [8, 9],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://kanchibariup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_13_dharmapur",
+      "unionId": "un_sundarganj_13_sreepur",
+      "nameBn": "ধর্মপুর",
+      "nameEn": "Dharmapur",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sreepurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_13_somos",
+      "unionId": "un_sundarganj_13_sreepur",
+      "nameBn": "সমস",
+      "nameEn": "Somos",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sreepurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_13_boali",
+      "unionId": "un_sundarganj_13_sreepur",
+      "nameBn": "বোয়ালী",
+      "nameEn": "Boali",
+      "aliasesBn": ["বোয়ালী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sreepurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_13_bhelaray",
+      "unionId": "un_sundarganj_13_sreepur",
+      "nameBn": "ভেলারায়",
+      "nameEn": "Bhelaray",
+      "aliasesBn": ["ভেলারায়"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sreepurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_13_uttar_sreepur",
+      "unionId": "un_sundarganj_13_sreepur",
+      "nameBn": "উত্তর শ্রীপুর",
+      "nameEn": "Uttar Sreepur",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sreepurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_13_dakshin_sreepur",
+      "unionId": "un_sundarganj_13_sreepur",
+      "nameBn": "দক্ষিণ শ্রীপুর",
+      "nameEn": "Dakshin Sreepur",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://sreepurup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_14_ujan_bochagari",
+      "unionId": "un_sundarganj_14_chandipur",
+      "nameBn": "উজান বোচাগাড়ী",
+      "nameEn": "Ujan Bochagari",
+      "aliasesBn": ["উজান বোচাগাড়ী"],
+      "verifiedWardNumbers": [1, 2, 3],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://chandipurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_14_chandipur",
+      "unionId": "un_sundarganj_14_chandipur",
+      "nameBn": "চন্ডিপুর",
+      "nameEn": "Chandipur",
+      "aliasesBn": ["চন্ডীপুর"],
+      "verifiedWardNumbers": [4, 5, 6],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://chandipurup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_14_sicha",
+      "unionId": "un_sundarganj_14_chandipur",
+      "nameBn": "সীচা",
+      "nameEn": "Sicha",
+      "aliasesBn": ["সিচা"],
+      "verifiedWardNumbers": [7, 8, 9],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://chandipurup.gaibandha.gov.bd"
+    },
+
+    {
+      "id": "vil_15_char_kapasia",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "চর কাপাসিয়া",
+      "nameEn": "Char Kapasia",
+      "aliasesBn": ["চর কাপাসিয়া"],
+      "verifiedWardNumbers": [1],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd",
+      "conflictNoteBn": "কাপাসিয়া ইউপি ১নং ওয়ার্ড হিসেবে দাপ্তরিক তথ্যে নিশ্চিত।",
+      "conflictNoteEn": "Confirmed in Ward 1 on Kapasia UP portal."
+    },
+    {
+      "id": "vil_15_lalchamar",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "লালচামার",
+      "nameEn": "Lalchamar",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_purbo_lalchamar",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "পূর্ব লালচামার",
+      "nameEn": "Purba Lalchamar",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_paschim_lalchamar",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "পশ্চিম লালচামার",
+      "nameEn": "Paschim Lalchamar",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_kalaisota",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "কালাইসোতা",
+      "nameEn": "Kalaisota",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_bhorer_pakhi",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "ভোরের পাখি",
+      "nameEn": "Bhorer Pakhi",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_shingijani",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "শিঙ্গিজানী",
+      "nameEn": "Shingijani",
+      "aliasesBn": ["শিংগিজানী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_bhati_kapasia",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "ভাটিকাপাসিয়া",
+      "nameEn": "Bhati Kapasia",
+      "aliasesBn": ["ভাটি কাপাসিয়া", "ভাটিকাপাসিয়া"],
+      "verifiedWardNumbers": [6],
+      "verificationStatus": "VERIFIED",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd",
+      "conflictNoteBn": "কাপাসিয়া ইউপি ৬নং ওয়ার্ড হিসেবে দাপ্তরিক তথ্যে নিশ্চিত।",
+      "conflictNoteEn": "Confirmed in Ward 6 on Kapasia UP portal."
+    },
+    {
+      "id": "vil_15_kaziar_char",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "কাজিয়ার চর",
+      "nameEn": "Kaziar Char",
+      "aliasesBn": ["কাজিয়ার চর"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_badamer_char",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "বাদামের চর",
+      "nameEn": "Badamer Char",
+      "aliasesBn": [],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_bochagari",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "বোচাগাড়ী",
+      "nameEn": "Bochagari",
+      "aliasesBn": ["বোচাগাড়ী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_ujan_borail",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "উজানবোড়াইল",
+      "nameEn": "Ujan Borail",
+      "aliasesBn": ["উজানবোড়াইল"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_bhati_bochagari",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "ভাটিবোচাগাড়ী",
+      "nameEn": "Bhati Bochagari",
+      "aliasesBn": ["ভাটিবোচাগাড়ী"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_bhati_burail",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "ভাটিবুড়াইল",
+      "nameEn": "Bhati Burail",
+      "aliasesBn": ["ভাটিবুড়াইল"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    },
+    {
+      "id": "vil_15_porar_char",
+      "unionId": "un_sundarganj_15_kapasia",
+      "nameBn": "পোড়ার চর",
+      "nameEn": "Porar Char",
+      "aliasesBn": ["পোড়ার চর"],
+      "verifiedWardNumbers": [],
+      "verificationStatus": "AWAITING_VERIFICATION",
+      "sourceUrl": "https://kapasiaup.gaibandha.gov.bd"
+    }
+  ]
+}

@@ -1,0 +1,456 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isBootstrappedAdmin() {
+      return isSignedIn() &&
+             'email_verified' in request.auth.token &&
+             'email' in request.auth.token &&
+             request.auth.token.email_verified == true &&
+             request.auth.token.email == 'mdalaminmiabd2880@gmail.com';
+    }
+
+    function isAdmin() {
+      return isBootstrappedAdmin() ||
+             (isSignedIn() &&
+              exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+              get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.active == true &&
+              get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role in ['admin', 'ADMIN', 'SUPER_ADMIN']);
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isValidTimestamp(ts) {
+      return ts is timestamp && ts <= request.time;
+    }
+
+    function isStr(val, minLen, maxLen) {
+      return val is string && val.size() >= minLen && val.size() <= maxLen;
+    }
+
+    function isValidAdminRecord(data, adminId) {
+      return data.userId == adminId &&
+             isStr(data.email, 3, 200) &&
+             data.role in ['admin', 'ADMIN', 'SUPER_ADMIN'] &&
+             data.active is bool &&
+             isValidTimestamp(data.createdAt) &&
+             isValidTimestamp(data.updatedAt);
+    }
+
+    function isValidWorkspaceMeta(data, userId) {
+      return data.userId == userId &&
+             isStr(data.email, 0, 200) &&
+             isStr(data.displayName, 0, 120) &&
+             data.workspaceInitialized is bool &&
+             data.nextIdSequence is int && data.nextIdSequence >= 1 && data.nextIdSequence <= 100000000 &&
+             isValidTimestamp(data.createdAt) &&
+             isValidTimestamp(data.updatedAt);
+    }
+
+    function isValidWebsiteSettings(data) {
+      return isStr(data.appNameBn, 1, 80) &&
+             isStr(data.appNameEn, 1, 80) &&
+             isStr(data.primaryColorHex, 7, 9) &&
+             isStr(data.accentColorHex, 7, 9) &&
+             isStr(data.headerText, 0, 160) &&
+             isStr(data.footerText, 0, 200) &&
+             isStr(data.welcomeMessageBn, 0, 400) &&
+             isStr(data.welcomeMessageEn, 0, 400) &&
+             isStr(data.contactPhone, 0, 40) &&
+             isStr(data.contactEmail, 0, 120) &&
+             isStr(data.logoBase64, 0, 200000) &&
+             data.showStatsSection is bool &&
+             data.showQuickActionsSection is bool &&
+             data.showPrivacyNotice is bool &&
+             data.mandatoryFields is list &&
+             data.mandatoryFields.size() <= 30 &&
+             (data.mandatoryFields.size() == 0 || data.mandatoryFields[0] is string) &&
+             isValidTimestamp(data.createdAt) &&
+             isValidTimestamp(data.updatedAt);
+    }
+
+    function isValidPimsRole(role) {
+      return role in ['SUPER_ADMIN', 'ADMIN', 'EDITOR', 'VIEWER', 'NORMAL_USER'];
+    }
+
+    function isValidPimsAccountCore(data) {
+      return data.personalId is string && data.personalId.size() >= 3 && data.personalId.size() <= 40 &&
+             data.passwordHash is string && data.passwordHash.size() >= 16 && data.passwordHash.size() <= 256 &&
+             data.passwordSalt is string && data.passwordSalt.size() >= 8 && data.passwordSalt.size() <= 128 &&
+             isValidPimsRole(data.role) &&
+             data.active is bool &&
+             data.mustChangePassword is bool &&
+             data.failedLoginAttempts is int && data.failedLoginAttempts >= 0 && data.failedLoginAttempts <= 100 &&
+             data.lockedUntilEpochMs is int && data.lockedUntilEpochMs >= 0 &&
+             data.canEditSelfProfile is bool &&
+             data.assignedRecordIds is list &&
+             data.assignedRecordIds.size() <= 100 &&
+             (data.assignedRecordIds.size() == 0 || data.assignedRecordIds[0] is string) &&
+             data.fullNameBn is string && data.fullNameBn.size() >= 1 && data.fullNameBn.size() <= 120 &&
+             data.fullNameEn is string && data.fullNameEn.size() <= 120 &&
+             data.fatherName is string && data.fatherName.size() <= 120 &&
+             data.motherName is string && data.motherName.size() <= 120 &&
+             data.dateOfBirth is string && data.dateOfBirth.size() <= 30 &&
+             data.gender is string && data.gender.size() <= 30 &&
+             data.bloodGroup is string && data.bloodGroup.size() <= 12 &&
+             data.mobileNumber is string && data.mobileNumber.size() <= 30 &&
+             data.emailAddress is string && data.emailAddress.size() <= 120 &&
+             data.photoBase64 is string && data.photoBase64.size() <= 200000;
+    }
+
+    function isValidPimsAccountDetails(data) {
+      return data.institutionId is string && data.institutionId.size() <= 128 &&
+             data.institutionName is string && data.institutionName.size() <= 160 &&
+             data.institutionType is string && data.institutionType.size() <= 40 &&
+             data.currentClassOrYear is string && data.currentClassOrYear.size() <= 80 &&
+             data.educationalQualification is string && data.educationalQualification.size() <= 120 &&
+             data.departmentOrSubject is string && data.departmentOrSubject.size() <= 120 &&
+             data.academicInfo is string && data.academicInfo.size() <= 500 &&
+             data.careerGoal is string && data.careerGoal.size() <= 400 &&
+             data.personalIntro is string && data.personalIntro.size() <= 800 &&
+             data.skills is string && data.skills.size() <= 400 &&
+             data.interests is string && data.interests.size() <= 400 &&
+             data.orgLevel is string && data.orgLevel.size() <= 80 &&
+             data.orgDesignation is string && data.orgDesignation.size() <= 120 &&
+             data.orgJoiningDate is string && data.orgJoiningDate.size() <= 30 &&
+             data.orgStatus is string && data.orgStatus.size() <= 40 &&
+             data.orgAdditionalInfo is string && data.orgAdditionalInfo.size() <= 500 &&
+             data.divisionId is string && data.divisionId.size() <= 128 &&
+             data.divisionName is string && data.divisionName.size() <= 80 &&
+             data.districtId is string && data.districtId.size() <= 128 &&
+             data.districtName is string && data.districtName.size() <= 80 &&
+             data.upazilaId is string && data.upazilaId.size() <= 128 &&
+             data.upazilaName is string && data.upazilaName.size() <= 80 &&
+             data.unionId is string && data.unionId.size() <= 128 &&
+             data.unionName is string && data.unionName.size() <= 80 &&
+             data.wardId is string && data.wardId.size() <= 128 &&
+             data.wardName is string && data.wardName.size() <= 80 &&
+             data.villageName is string && data.villageName.size() <= 120 &&
+             isValidTimestamp(data.createdAt) &&
+             isValidTimestamp(data.updatedAt);
+    }
+
+    function isValidPimsAccount(data) {
+      return data.size() == 49 &&
+             isValidPimsAccountCore(data) &&
+             isValidPimsAccountDetails(data);
+    }
+
+    function isValidLocationNode(data) {
+      return data.level in ['DIVISION', 'DISTRICT', 'UPAZILA', 'UNION', 'WARD', 'VILLAGE'] &&
+             isStr(data.parentId, 0, 128) &&
+             isStr(data.nameBn, 1, 120) &&
+             isStr(data.nameEn, 0, 120) &&
+             isStr(data.code, 0, 40) &&
+             isValidTimestamp(data.createdAt) &&
+             isValidTimestamp(data.updatedAt);
+    }
+
+    function isValidInstitution(data) {
+      return isStr(data.nameBn, 1, 160) &&
+             isStr(data.nameEn, 0, 160) &&
+             data.institutionType in ['SCHOOL', 'COLLEGE', 'MADRASA', 'UNIVERSITY', 'TECHNICAL', 'OTHER'] &&
+             isStr(data.eiinCode, 0, 40) &&
+             isStr(data.divisionId, 0, 128) &&
+             isStr(data.districtId, 0, 128) &&
+             isStr(data.upazilaId, 0, 128) &&
+             isStr(data.unionId, 0, 128) &&
+             isStr(data.wardId, 0, 128) &&
+             isStr(data.locationLabel, 0, 240) &&
+             isValidTimestamp(data.createdAt) &&
+             isValidTimestamp(data.updatedAt);
+    }
+
+    function isValidOrgPosition(data) {
+      return isStr(data.levelNameBn, 1, 100) &&
+             isStr(data.levelNameEn, 0, 100) &&
+             isStr(data.designationBn, 1, 120) &&
+             isStr(data.designationEn, 0, 120) &&
+             data.rankOrder is int && data.rankOrder >= 0 && data.rankOrder <= 10000 &&
+             isValidTimestamp(data.createdAt) &&
+             isValidTimestamp(data.updatedAt);
+    }
+
+    function isValidVaultEntry(data) {
+      return isStr(data.ownerPersonalId, 3, 40) &&
+             data.category in ['CREDENTIAL', 'DOCUMENT', 'PRIVATE_NOTE'] &&
+             isStr(data.title, 1, 140) &&
+             isStr(data.ciphertextBase64, 1, 400000) &&
+             isStr(data.ivBase64, 8, 64) &&
+             isStr(data.saltBase64, 8, 128) &&
+             isValidTimestamp(data.createdAt) &&
+             isValidTimestamp(data.updatedAt);
+    }
+
+    function isValidActivityLog(data) {
+      return isStr(data.actorPersonalId, 1, 40) &&
+             isStr(data.actorRole, 1, 30) &&
+             isStr(data.actionType, 1, 60) &&
+             isStr(data.targetPersonalId, 0, 40) &&
+             isStr(data.summaryBn, 1, 300) &&
+             isStr(data.summaryEn, 0, 300) &&
+             data.status in ['SUCCESS', 'DENIED', 'FAILED'] &&
+             isValidTimestamp(data.createdAt);
+    }
+
+    // Trusted Admin Registry: only verified admins can write or enumerate admin grants
+    match /admins/{adminId} {
+      allow get: if isSignedIn() && isValidId(adminId) && (isOwner(adminId) || isAdmin());
+      allow list: if isBootstrappedAdmin() || (isSignedIn() && existing().userId == request.auth.uid);
+      allow create: if isSignedIn() &&
+                       isValidId(adminId) &&
+                       incoming().keys().hasAll(['userId', 'email', 'role', 'active', 'createdAt', 'updatedAt']) &&
+                       incoming().keys().hasOnly(['userId', 'email', 'role', 'active', 'createdAt', 'updatedAt']) &&
+                       isValidAdminRecord(incoming(), adminId) &&
+                       isAdmin();
+      allow update: if isSignedIn() &&
+                       isValidId(adminId) &&
+                       isValidAdminRecord(incoming(), adminId) &&
+                       incoming().userId == existing().userId &&
+                       incoming().createdAt == existing().createdAt &&
+                       incoming().diff(existing()).affectedKeys().hasOnly(['email', 'role', 'active', 'updatedAt']) &&
+                       isAdmin();
+      allow delete: if isSignedIn() && isValidId(adminId) && isAdmin();
+    }
+
+    // User individual profile document & scoped subcollections
+    match /users/{userId} {
+      allow get: if isSignedIn() && isValidId(userId) && (isOwner(userId) || isAdmin());
+      allow list: if isBootstrappedAdmin() || (isSignedIn() && existing().userId == request.auth.uid);
+      allow create: if isSignedIn() &&
+                       isValidId(userId) &&
+                       incoming().keys().hasAll(['userId', 'email', 'displayName', 'workspaceInitialized', 'nextIdSequence', 'createdAt', 'updatedAt']) &&
+                       incoming().keys().hasOnly(['userId', 'email', 'displayName', 'workspaceInitialized', 'nextIdSequence', 'createdAt', 'updatedAt']) &&
+                       isValidWorkspaceMeta(incoming(), userId) &&
+                       (isOwner(userId) || isAdmin());
+      allow update: if isSignedIn() &&
+                       isValidId(userId) &&
+                       isValidWorkspaceMeta(incoming(), userId) &&
+                       incoming().userId == existing().userId &&
+                       incoming().createdAt == existing().createdAt &&
+                       incoming().diff(existing()).affectedKeys().hasOnly(['email', 'displayName', 'workspaceInitialized', 'nextIdSequence', 'updatedAt']) &&
+                       (isOwner(userId) || isAdmin());
+      allow delete: if isSignedIn() && isValidId(userId) && isAdmin();
+
+      // Website & branding configuration: readable by owner/admin, writable ONLY by admins
+      match /settings/{settingId} {
+        allow get: if isSignedIn() && isValidId(settingId) && (isOwner(userId) || isAdmin());
+        allow list: if isOwner(userId) || isBootstrappedAdmin();
+        allow create: if isSignedIn() &&
+                         isValidId(settingId) &&
+                         incoming().keys().hasAll([
+                           'appNameBn', 'appNameEn', 'primaryColorHex', 'accentColorHex',
+                           'headerText', 'footerText', 'welcomeMessageBn', 'welcomeMessageEn',
+                           'contactPhone', 'contactEmail', 'logoBase64',
+                           'showStatsSection', 'showQuickActionsSection', 'showPrivacyNotice',
+                           'mandatoryFields', 'createdAt', 'updatedAt'
+                         ]) &&
+                         incoming().keys().hasOnly([
+                           'appNameBn', 'appNameEn', 'primaryColorHex', 'accentColorHex',
+                           'headerText', 'footerText', 'welcomeMessageBn', 'welcomeMessageEn',
+                           'contactPhone', 'contactEmail', 'logoBase64',
+                           'showStatsSection', 'showQuickActionsSection', 'showPrivacyNotice',
+                           'mandatoryFields', 'createdAt', 'updatedAt'
+                         ]) &&
+                         isValidWebsiteSettings(incoming()) &&
+                         isAdmin();
+        allow update: if isSignedIn() &&
+                         isValidId(settingId) &&
+                         isValidWebsiteSettings(incoming()) &&
+                         incoming().createdAt == existing().createdAt &&
+                         incoming().diff(existing()).affectedKeys().hasOnly([
+                           'appNameBn', 'appNameEn', 'primaryColorHex', 'accentColorHex',
+                           'headerText', 'footerText', 'welcomeMessageBn', 'welcomeMessageEn',
+                           'contactPhone', 'contactEmail', 'logoBase64',
+                           'showStatsSection', 'showQuickActionsSection', 'showPrivacyNotice',
+                           'mandatoryFields', 'updatedAt'
+                         ]) &&
+                         isAdmin();
+        allow delete: if isSignedIn() && isValidId(settingId) && isAdmin();
+      }
+
+      // PIMS Accounts & Profiles: create/delete & RBAC privilege changes strictly admin-only;
+      // standard owners can only update their own allowed non-privileged profile / credential fields
+      match /pims_accounts/{accountId} {
+        allow get: if isSignedIn() && isValidId(accountId) && (isOwner(userId) || isAdmin());
+        allow list: if isOwner(userId) || isBootstrappedAdmin();
+        allow create: if isSignedIn() &&
+                         isValidId(accountId) &&
+                         incoming().keys().hasOnly([
+                           'personalId', 'passwordHash', 'passwordSalt', 'role', 'active', 'mustChangePassword',
+                           'failedLoginAttempts', 'lockedUntilEpochMs', 'canEditSelfProfile', 'assignedRecordIds',
+                           'fullNameBn', 'fullNameEn', 'fatherName', 'motherName', 'dateOfBirth', 'gender',
+                           'bloodGroup', 'mobileNumber', 'emailAddress', 'photoBase64',
+                           'institutionId', 'institutionName', 'institutionType', 'currentClassOrYear',
+                           'educationalQualification', 'departmentOrSubject', 'academicInfo',
+                           'careerGoal', 'personalIntro', 'skills', 'interests',
+                           'orgLevel', 'orgDesignation', 'orgJoiningDate', 'orgStatus', 'orgAdditionalInfo',
+                           'divisionId', 'divisionName', 'districtId', 'districtName', 'upazilaId', 'upazilaName',
+                           'unionId', 'unionName', 'wardId', 'wardName', 'villageName',
+                           'createdAt', 'updatedAt'
+                         ]) &&
+                         isValidPimsAccount(incoming()) &&
+                         isAdmin();
+        allow update: if isSignedIn() &&
+                         isValidId(accountId) &&
+                         incoming().keys().hasOnly([
+                           'personalId', 'passwordHash', 'passwordSalt', 'role', 'active', 'mustChangePassword',
+                           'failedLoginAttempts', 'lockedUntilEpochMs', 'canEditSelfProfile', 'assignedRecordIds',
+                           'fullNameBn', 'fullNameEn', 'fatherName', 'motherName', 'dateOfBirth', 'gender',
+                           'bloodGroup', 'mobileNumber', 'emailAddress', 'photoBase64',
+                           'institutionId', 'institutionName', 'institutionType', 'currentClassOrYear',
+                           'educationalQualification', 'departmentOrSubject', 'academicInfo',
+                           'careerGoal', 'personalIntro', 'skills', 'interests',
+                           'orgLevel', 'orgDesignation', 'orgJoiningDate', 'orgStatus', 'orgAdditionalInfo',
+                           'divisionId', 'divisionName', 'districtId', 'districtName', 'upazilaId', 'upazilaName',
+                           'unionId', 'unionName', 'wardId', 'wardName', 'villageName',
+                           'createdAt', 'updatedAt'
+                         ]) &&
+                         isValidPimsAccount(incoming()) &&
+                         incoming().personalId == existing().personalId &&
+                         incoming().createdAt == existing().createdAt &&
+                         (
+                           isAdmin() ||
+                           (
+                             isOwner(userId) &&
+                             incoming().role == existing().role &&
+                             incoming().active == existing().active &&
+                             incoming().canEditSelfProfile == existing().canEditSelfProfile &&
+                             incoming().assignedRecordIds == existing().assignedRecordIds &&
+                             (
+                               existing().canEditSelfProfile == true ||
+                               incoming().diff(existing()).affectedKeys().hasOnly([
+                                 'passwordHash', 'passwordSalt', 'mustChangePassword',
+                                 'failedLoginAttempts', 'lockedUntilEpochMs', 'updatedAt'
+                               ])
+                             )
+                           )
+                         );
+        allow delete: if isSignedIn() && isValidId(accountId) && isAdmin();
+      }
+
+      // Master administrative geography: readable by owner/admin, writable ONLY by admins
+      match /locations/{locationId} {
+        allow get: if isSignedIn() && isValidId(locationId) && (isOwner(userId) || isAdmin());
+        allow list: if isOwner(userId) || isBootstrappedAdmin();
+        allow create: if isSignedIn() &&
+                         isValidId(locationId) &&
+                         incoming().keys().hasAll(['level', 'parentId', 'nameBn', 'nameEn', 'code', 'createdAt', 'updatedAt']) &&
+                         incoming().keys().hasOnly(['level', 'parentId', 'nameBn', 'nameEn', 'code', 'createdAt', 'updatedAt']) &&
+                         isValidLocationNode(incoming()) &&
+                         isAdmin();
+        allow update: if isSignedIn() &&
+                         isValidId(locationId) &&
+                         isValidLocationNode(incoming()) &&
+                         incoming().createdAt == existing().createdAt &&
+                         incoming().diff(existing()).affectedKeys().hasOnly(['level', 'parentId', 'nameBn', 'nameEn', 'code', 'updatedAt']) &&
+                         isAdmin();
+        allow delete: if isSignedIn() && isValidId(locationId) && isAdmin();
+      }
+
+      // Master educational institutions: readable by owner/admin, writable ONLY by admins
+      match /institutions/{institutionId} {
+        allow get: if isSignedIn() && isValidId(institutionId) && (isOwner(userId) || isAdmin());
+        allow list: if isOwner(userId) || isBootstrappedAdmin();
+        allow create: if isSignedIn() &&
+                         isValidId(institutionId) &&
+                         incoming().keys().hasAll([
+                           'nameBn', 'nameEn', 'institutionType', 'eiinCode',
+                           'divisionId', 'districtId', 'upazilaId', 'unionId', 'wardId',
+                           'locationLabel', 'createdAt', 'updatedAt'
+                         ]) &&
+                         incoming().keys().hasOnly([
+                           'nameBn', 'nameEn', 'institutionType', 'eiinCode',
+                           'divisionId', 'districtId', 'upazilaId', 'unionId', 'wardId',
+                           'locationLabel', 'createdAt', 'updatedAt'
+                         ]) &&
+                         isValidInstitution(incoming()) &&
+                         isAdmin();
+        allow update: if isSignedIn() &&
+                         isValidId(institutionId) &&
+                         isValidInstitution(incoming()) &&
+                         incoming().createdAt == existing().createdAt &&
+                         incoming().diff(existing()).affectedKeys().hasOnly([
+                           'nameBn', 'nameEn', 'institutionType', 'eiinCode',
+                           'divisionId', 'districtId', 'upazilaId', 'unionId', 'wardId',
+                           'locationLabel', 'updatedAt'
+                         ]) &&
+                         isAdmin();
+        allow delete: if isSignedIn() && isValidId(institutionId) && isAdmin();
+      }
+
+      // Organizational positions master dataset: readable by owner/admin, writable ONLY by admins
+      match /org_positions/{positionId} {
+        allow get: if isSignedIn() && isValidId(positionId) && (isOwner(userId) || isAdmin());
+        allow list: if isOwner(userId) || isBootstrappedAdmin();
+        allow create: if isSignedIn() &&
+                         isValidId(positionId) &&
+                         incoming().keys().hasAll(['levelNameBn', 'levelNameEn', 'designationBn', 'designationEn', 'rankOrder', 'createdAt', 'updatedAt']) &&
+                         incoming().keys().hasOnly(['levelNameBn', 'levelNameEn', 'designationBn', 'designationEn', 'rankOrder', 'createdAt', 'updatedAt']) &&
+                         isValidOrgPosition(incoming()) &&
+                         isAdmin();
+        allow update: if isSignedIn() &&
+                         isValidId(positionId) &&
+                         isValidOrgPosition(incoming()) &&
+                         incoming().createdAt == existing().createdAt &&
+                         incoming().diff(existing()).affectedKeys().hasOnly(['levelNameBn', 'levelNameEn', 'designationBn', 'designationEn', 'rankOrder', 'updatedAt']) &&
+                         isAdmin();
+        allow delete: if isSignedIn() && isValidId(positionId) && isAdmin();
+      }
+
+      // Personal encrypted vault: strictly accessible ONLY by the individual document owner
+      match /vault_entries/{entryId} {
+        allow get: if isOwner(userId) && isValidId(entryId);
+        allow list: if isOwner(userId);
+        allow create: if isOwner(userId) &&
+                         isValidId(entryId) &&
+                         incoming().keys().hasAll(['ownerPersonalId', 'category', 'title', 'ciphertextBase64', 'ivBase64', 'saltBase64', 'createdAt', 'updatedAt']) &&
+                         incoming().keys().hasOnly(['ownerPersonalId', 'category', 'title', 'ciphertextBase64', 'ivBase64', 'saltBase64', 'createdAt', 'updatedAt']) &&
+                         isValidVaultEntry(incoming());
+        allow update: if isOwner(userId) &&
+                         isValidId(entryId) &&
+                         isValidVaultEntry(incoming()) &&
+                         incoming().ownerPersonalId == existing().ownerPersonalId &&
+                         incoming().createdAt == existing().createdAt &&
+                         incoming().diff(existing()).affectedKeys().hasOnly(['category', 'title', 'ciphertextBase64', 'ivBase64', 'saltBase64', 'updatedAt']);
+        allow delete: if isOwner(userId) && isValidId(entryId);
+      }
+
+      // Append-only audit logs: readable by owner/admin, deletable ONLY by admins
+      match /activity_logs/{logId} {
+        allow get: if isSignedIn() && isValidId(logId) && (isOwner(userId) || isAdmin());
+        allow list: if isOwner(userId) || isBootstrappedAdmin();
+        allow create: if isSignedIn() &&
+                         isValidId(logId) &&
+                         incoming().keys().hasAll(['actorPersonalId', 'actorRole', 'actionType', 'targetPersonalId', 'summaryBn', 'summaryEn', 'status', 'createdAt']) &&
+                         incoming().keys().hasOnly(['actorPersonalId', 'actorRole', 'actionType', 'targetPersonalId', 'summaryBn', 'summaryEn', 'status', 'createdAt']) &&
+                         isValidActivityLog(incoming()) &&
+                         (isOwner(userId) || isAdmin());
+        allow update: if false;
+        allow delete: if isSignedIn() && isValidId(logId) && isAdmin();
+      }
+    }
+  }
+}
